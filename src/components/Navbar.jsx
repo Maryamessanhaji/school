@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Footer from "./Footer";
+import CoursesSection from "../pages/Courses";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <nav className="bg-white shadow-2xl z-10	 fixed  w-full top-3  ">
+      <nav className=" bg-white shadow-2xl z-10 fixed  w-full top-3  ">
         <div className="max-w-screen-xl flex flex-row-reverse 
         flex-wrap items-center justify-between mx-auto  ">
           {/* Logo */}
           <Link to="#" className="flex items-center">
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
               <img src="https://i.pinimg.com/236x/e4/5c/46/e45c462ff7949f4b1dee1d765d3a31a7.jpg" alt="" 
-              className="w-24 "/>
+              className="w-20 "/>
               
             </span>
           </Link>
@@ -55,10 +57,10 @@ export default function Navbar() {
             <ul className=" flex flex-col items-center p-3 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:space-x-reverse md:mt-0 md:border-0  ">
             
               <li>
-                <button className="   m-1 bg-gradient-to-t from-[#cfc85a] hover:from-rose-500 to-rose-400 hover:to-[#cfc85a] px-6 py-3 text-2xl text-slate-800
+                <button className=" m-1 bg-gradient-to-r from-[#cfc85a] hover:from-amber-500 to-amber-400  hover:to-[#cfc85a] px-4 py-2 text-2xl text-gray-700
                 hover:text-white rounded-xl translate-all">
                   <Link
-                    to="#"
+                    to="/login"
                     className=""
                    
                   >
@@ -67,10 +69,10 @@ export default function Navbar() {
                 </button>
               </li>
               <li>
-              <button className="  m-1 bg-gradient-to-t from-[#cfc85a] hover:from-rose-500 to-rose-400 hover:to-[#cfc85a] px-9 py-3 text-2xl text-slate-800
+              <button className="  m-1 bg-gradient-to-r from-[#cfc85a] hover:from-amber-500 to-amber-400 hover:to-[#cfc85a] px-6 py-2 text-2xl text-gray-700
                 hover:text-white rounded-xl translate-all">
                   <Link
-                    to="#"
+                    to="/register"
                    
                   >
                     إنشاء حساب
@@ -95,6 +97,13 @@ export default function Navbar() {
       </nav>
       <section>
         <Outlet/>
+      </section>
+      
+      <section>
+        <CoursesSection/>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </>
   );
