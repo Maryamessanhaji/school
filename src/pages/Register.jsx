@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 flex-row-reverse ">
-      <div className="bg-white border border-y-amber-300 mt-28 rounded-lg shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden ">
+      <div className="bg-white border border-y-amber-300 mt-10 rounded-lg shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden ">
         {/* Left Section: Form */}
         <div className="w-full md:w-2/3 p-8">
           {/* Already have an account? */}

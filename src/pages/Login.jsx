@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import login from'../assets/login.jpg'
 
 export default function Login() {
   return (
-    <div className="min-h-screen mt-6 flex items-center justify-center bg--500">
+    <div className="min-h-screen  flex items-center justify-center bg--500">
       <div className="bg-white border border-x-amber-300 rounded-lg shadow-lg w-full max-w-3xl flex flex-col md:flex-row">
         {/* Left Section: Image */}
         <div className="hidden md:block md:w-1/2">
           <img
-            src="https://srv4.imgonline.com.ua/result_img/imgonline-com-ua-ReplaceColor-HB6FZj0AYwe.jpg"
+            src={login}
             alt="Login Illustration"
             className="w-full h-full object-cover rounded-l-lg"
           />
@@ -51,8 +52,7 @@ export default function Login() {
               />
             </div>
             {/* Login Button */}
-            {/* className=" m-1 bg-gradient-to-r from-[#cfc85a] hover:from-amber-500 to-amber-400  hover:to-[#cfc85a] px-4 py-2 text-2xl text-slate-800
-                hover:text-white rounded-xl translate-all" */}
+           
             <button
               type="submit"
               className="w-full bg-gradient-to-r from-[#cfc85a] to-amber-400  hover:from-amber-500  hover:to-[#cfc85a] text-white py-2 px-4 rounded-lg shadow-lg  focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition duration-300"

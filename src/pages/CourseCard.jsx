@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function CourseCard({ title, description, videoUrl, price, courseNumber }) {
   return (
   
        
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden  ">
             {/* Video Section */}
             <div className="relative">
               <img
                 src={videoUrl}
                 alt={title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition hover:scale-110  hover:shadow-xl 	"
                 controls
               />
             </div>
@@ -37,7 +38,10 @@ export default function CourseCard({ title, description, videoUrl, price, course
             {/* Learn More Button */}
             <div className="p-4 bg-gray-50">
               <button className="bg-gradient-to-r from-[#cfc85a] to-amber-400  hover:from-amber-500  hover:to-[#cfc85a] text-white py-2 px-4 rounded-full w-full">
+                <Link to='/courseDescription'>
                 تعرف على المزيد
+
+                </Link>
               </button>
             </div>
           </div>
