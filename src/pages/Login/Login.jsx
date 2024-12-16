@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import login from'../assets/login.jpg'
+import login from "../../../src/assets/login.jpg";
 
 export default function Login() {
   return (
@@ -25,8 +24,7 @@ export default function Login() {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="block text-right text-gray-700 font-medium mb-2"
-              >
+                className="block text-right text-gray-700 font-medium mb-2">
                 البريد الإلكتروني
               </label>
               <input
@@ -40,8 +38,7 @@ export default function Login() {
             <div className="mb-6">
               <label
                 htmlFor="password"
-                className="block text-right text-gray-700 font-medium mb-2"
-              >
+                className="block text-right text-gray-700 font-medium mb-2">
                 كلمة المرور
               </label>
               <input
@@ -52,11 +49,10 @@ export default function Login() {
               />
             </div>
             {/* Login Button */}
-           
+
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-[#cfc85a] to-amber-400  hover:from-amber-500  hover:to-[#cfc85a] text-white py-2 px-4 rounded-lg shadow-lg  focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition duration-300"
-            >
+              className="w-full bg-gradient-to-r from-[#cfc85a] to-amber-400  hover:from-amber-500  hover:to-[#cfc85a] text-white py-2 px-4 rounded-lg shadow-lg  focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50 transition duration-300">
               تسجيل الدخول
             </button>
           </form>
@@ -67,8 +63,7 @@ export default function Login() {
               ليس لديك حساب؟{" "}
               <Link
                 to="/register"
-                className="text-blue-600 hover:text-purple-600 transition duration-300 underline"
-              >
+                className="text-blue-600 hover:text-purple-600 transition duration-300 underline">
                 إنشاء حساب
               </Link>
             </p>
@@ -78,8 +73,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <Link
               to="/"
-              className="inline-block bg-orange-400 text-white py-2 px-6 rounded-lg shadow-md hover:bg-orange-900 transition duration-300"
-            >
+              className="inline-block bg-orange-400 text-white py-2 px-6 rounded-lg shadow-md hover:bg-orange-900 transition duration-300">
               العودة إلى الصفحة الرئيسية
             </Link>
           </div>

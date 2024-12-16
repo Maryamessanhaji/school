@@ -1,17 +1,16 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-l from-[#cfc85a] mt-36 text-gray-700 py-8">
+    <footer className=" bg-[rgb(0,61,79)] mt-36 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div className="text-right">
             <h3 className="text-lg font-semibold mb-4">معلومات عنا</h3>
             <p className="text-sm">
-              نحن فريق ملتزم بتقديم خدمات تعليمية متميزة، تركز على تطوير مهارات الطلاب
-              وتمكينهم لتحقيق أحلامهم.
+              نحن فريق ملتزم بتقديم خدمات تعليمية متميزة، تركز على تطوير مهارات
+              الطلاب وتمكينهم لتحقيق أحلامهم.
             </p>
           </div>
 

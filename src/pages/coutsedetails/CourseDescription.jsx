@@ -1,18 +1,8 @@
-import React from "react";
-
 export default function CourseDescription() {
   return (
     <div className="bg-gray-100 py-16 px-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start">
         {/* Left Section: Course Image */}
-        <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <img
-          src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s"
-
-            alt="Course"
-            className="rounded-lg shadow-lg w-full object-cover"
-          />
-        </div>
 
         {/* Right Section: Course Details */}
         <div className="w-full md:w-1/2 md:pl-12 text-right">
@@ -22,19 +12,19 @@ export default function CourseDescription() {
           </h2>
           {/* Course Description */}
           <p className="text-gray-600 leading-relaxed mb-6">
-            هذه الدورة مصممة لمساعدتك على تطوير مهاراتك في المجال المطلوب. تتضمن الدورة
-            محتوى تعليمي عالي الجودة يغطي جميع المواضيع الأساسية بطريقة بسيطة وسهلة
-            الفهم.
+            هذه الدورة مصممة لمساعدتك على تطوير مهاراتك في المجال المطلوب. تتضمن
+            الدورة محتوى تعليمي عالي الجودة يغطي جميع المواضيع الأساسية بطريقة
+            بسيطة وسهلة الفهم.
           </p>
           {/* Instructor Info */}
           <div className="mb-6">
-            <h4 className="text-xl font-semibold text-gray-800" >:المحاضر  </h4>
+            <h4 className="text-xl font-semibold text-gray-800">:المحاضر </h4>
             <p className="text-gray-600">د. أحمد محمد</p>
           </div>
           {/* Features List */}
           <div className="mb-6">
             <h4 className="text-xl font-semibold text-gray-800 mb-2">
-             : مميزات الدورة
+              : مميزات الدورة
             </h4>
             <ul className="list-none pr-4 text-gray-600 space-y-2">
               <li>إمكانية الوصول مدى الحياة للمحتوى</li>
@@ -49,6 +39,13 @@ export default function CourseDescription() {
               اشترك الآن
             </button>
           </div>
+        </div>
+        <div className="w-full md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s"
+            alt="Course"
+            className="rounded-lg shadow-lg w-full object-cover"
+          />
         </div>
       </div>
     </div>
