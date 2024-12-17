@@ -1,8 +1,11 @@
+import Dropdown from "./Dropdown";
+import YearCard from "./YearCard";
+
 export default function Years() {
   return (
-    <div className="my-[20px] flex flex-col gap-8">
+    <div className="my-[20px] flex flex-col gap-8  dark:bg-drkColor">
       <div className="flex flex-col items-center justify-center">
-        <h4 className="text-[40px] relative font-[Marhey] font-bold text-secondaryColor">
+        <h4 className="text-[40px] relative font-[Marhey] font-bold text-secondaryColor ">
           <svg
             width="120"
             height="70"
@@ -29,7 +32,7 @@ export default function Years() {
           </svg>
         </h4>
         <div className="mt-12 flex justify-between w-[100%]">
-          <p className="max-w-[300px]">
+          <p className="max-w-[300px] dark:text-white">
             بخطوات بسيطة بإمكانك التسجيل في منصتنا مجاناً وتصبح فرد من عائلتنا
             وتستمتع بالمحتوي التعليمي والخدمات المُقدمه اليك ...
           </p>
@@ -45,6 +48,9 @@ export default function Years() {
           السنين الدراسيه
         </h5>
       </div>
+      <Dropdown/>
+      <YearCard/>
+    
     </div>
   );
 }

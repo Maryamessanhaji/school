@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white">
               الشاطر
             </span>
           </Link>
@@ -60,9 +60,9 @@ export default function Navbar() {
           <div
             className={`${
               isOpen ? "block" : "hidden"
-            } w-full md:block md:w-auto`}
+            } w-full md:block md:w-auto  `}
             id="navbar">
-            <ul className="flex  items-center p-3 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:space-x-reverse md:mt-0 md:border-0  ">
+            <ul className="flex  items-center sm:flex sm:justify-center sm:space-x-1  p-3 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:space-x-reverse md:mt-0 md:border-0  ">
               <li className="flex items-center gap-2">
                 <div className="flex bg-gray-50 border border-[#a89f89] focus-within:bg-transparent focus-within:border-gray-400 rounded-full px-4 py-2.5 overflow-hidden max-w-52 max-lg:hidden">
                   <input
@@ -83,14 +83,14 @@ export default function Navbar() {
 
               <li>
                 <button className="flex items-center gap-[5px] bg-white px-4 py-1 text-[16px] font-bold hover:shadow-custom text-black rounded-xl transition-all group">
-                  <IoMdLogIn className="transition-transform  text-mainColor duration-500 ease-in-out group-hover:rotate-[720deg]" />
-                  <Link to="/register">
-                    تسجيل <span className="text-mainColor">دخولك</span>
+                  <IoMdLogIn className="transition-transform  text-secondaryColor duration-500 ease-in-out group-hover:rotate-[720deg]" />
+                  <Link to="/login">
+                    تسجيل <span className="text-secondaryColor">دخولك</span>
                   </Link>
                 </button>
               </li>
               <li>
-                <button className="bg-mainColor   px-4 py-1 text-[16px] font-bold text-black hover:text-mainColor hover:bg-white rounded-xl transition-all">
+                <button className="bg-secondaryColor   px-4 py-1 text-[16px] font-bold text-black hover:text-secondaryColor hover:bg-white rounded-xl transition-all">
                   <Link to="/register" className="">
                     انشئ حسابك الان!
                   </Link>

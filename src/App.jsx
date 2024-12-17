@@ -5,13 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Footer from "./components/Footer";
-import CourseDescription from "./pages/CourseDescription";
 import Home from "./pages/Home/Home";
 import Courses from "./pages/Courses/Courses";
+import CourseDescription from "./pages/coutsedetails/CourseDescription";
+import YearCard from "./pages/Home/components/years/YearCard";
+import Years from "./pages/Home/components/years/Years";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter >
         <Navbar />
         <Routes>
           <Route path="/">
@@ -21,6 +23,8 @@ function App() {
             <Route path="/footer" element={<Footer />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courseDescription" element={<CourseDescription />} />
+            <Route path="/yearCard" element={<YearCard />} />
+            <Route path="/years" element={<Years />} />
           </Route>
         </Routes>
         <Footer />  

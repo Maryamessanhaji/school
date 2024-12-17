@@ -20,52 +20,35 @@ const courses = [
     courseNumber: "102",
   },
   {
-    title: "دورة اللغة الإنجليزية للمبتدئين",
-    description: "دورة لتعلم أساسيات اللغة الإنجليزية بطريقة مبتكرة وسهلة.",
+    title: "دورة التسويق الرقمي",
+    description:
+      "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
-    price: "150",
-    courseNumber: "103",
-  },
-  {
-    title: "دورة اللغة الإنجليزية للمبتدئين",
-    description: "دورة لتعلم أساسيات اللغة الإنجليزية بطريقة مبتكرة وسهلة.",
-    videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
-    price: "150",
-    courseNumber: "103",
-  },
-  {
-    title: "دورة اللغة الإنجليزية للمبتدئين",
-    description: "دورة لتعلم أساسيات اللغة الإنجليزية بطريقة مبتكرة وسهلة.",
-    videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
-    price: "150",
-    courseNumber: "103",
-  },
-  {
-    title: "دورة اللغة الإنجليزية للمبتدئين",
-    description: "دورة لتعلم أساسيات اللغة الإنجليزية بطريقة مبتكرة وسهلة.",
-    videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
-    price: "150",
-    courseNumber: "103",
+    price: "250",
+    courseNumber: "102",
   },
 ];
 export default function Courses() {
   return (
     <section className="py-16  text-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800">دورات تعليمية</h2>
-        <p className="mt-4 text-gray-600">
-          اكتشف مجموعة من الدورات التعليمية المتخصصة في مختلف المجالات.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className=" mt-4 text-gray-800 py-2 px-7 rounded-lg shadow-lg bg-amber-400 hover:text-white transition duration-300">
+        <h4 className="text-[40px] relative font-[Marhey] font-bold text-secondaryColor ">
+          كورستنا التعليمية
+        </h4>
+        <div className="mt-12 flex justify-between w-[100%]">
+          <p className="max-w-[300px] dark:text-white">
+            اكتشف مجموعة من الدورات التعليمية المتخصصة في مختلف المجالات.
+          </p>
+          <button
+            className="bg-secondaryColor h-fit p-[5px_15px] w-40 rounded-lg text-white
+            hover:bg-white transition-all ease-in-out hover:text-secondaryColor "
+          >
             جميع الدورات
           </button>
         </div>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="  flex  flex-col md:flex-row items-center md:items-start mx-auto  ">
           {courses.map((course, index) => (
             <CourseCard
               key={index}

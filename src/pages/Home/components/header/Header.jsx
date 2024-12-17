@@ -4,17 +4,17 @@ const { title } = Styles;
 
 export default function Header() {
   return (
-    <div>
+    <div  >
       {" "}
-      <section className="flex h-auto bg-cover bg-center  items-center justify-between">
+      <section className="flex h-auto bg-cover bg-center  items-center justify-between  ">
         <div className="container mx-auto flex flex-col">
           <div className="max-w-2xl">
             <h1
-              className={`text-gray-700 text-[50px] font-bold leading-tight mb-4 ${title}`}>
+              className={`text-gray-700  dark:text-white text-[50px] font-bold leading-tight mb-4 ${title}`}>
               مرحباً بكم في منصه
               <span className="text-secondaryColor px-2 inline-block">الشاطر</span>
             </h1>
-            <p className="text-gray-700 text-lg md:text-xl mb-6">
+            <p className="text-gray-700 text-lg md:text-xl mb-6 dark:text-white">
               نقدم لكم أفضل الموارد التعليمية المبتكرة لتعزيز مستوى تعلمكم. مع
               منصتنا، التعليم يصبح أسهل وأكثر متعة.{" "}
             </p>
@@ -28,7 +28,7 @@ export default function Header() {
         <div className="">
           <img
             src="https://khaled-sakr.com/static/media/khaledMasked.b8ed0515892ec0adb894.png"
-            alt=""
+            alt="not found"
             className="w-[500px]"
           />
         </div>

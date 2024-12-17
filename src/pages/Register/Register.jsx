@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 flex-row-reverse ">
-      <div className="bg-white border border-y-amber-300 mt-10 rounded-lg shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden ">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 flex-row-reverse dark:bg-drkColor ">
+      <div className="bg-white border dark:bg-drkColor dark:text-white border-secondaryColor mt-10 rounded-lg shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden ">
         {/* Left Section: Form */}
         <div className="w-full md:w-2/3 p-8">
           {/* Already have an account? */}
           <div className="text-right mb-6">
-            <span className="text-gray-600">لديك حساب بالفعل؟ </span>
+            <span className="text-secondaryColor dark:text-white">
+              لديك حساب بالفعل؟{" "}
+            </span>
             <Link
               to="/login"
               className="text-blue-500 hover:underline hover:text-blue-700 transition duration-300"
@@ -19,7 +21,7 @@ export default function Register() {
           </div>
 
           {/* Title */}
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+          <h2 className="text-3xl font-bold text-secondaryColor dark:text-white text-center mb-8">
             إنشاء حساب
           </h2>
 
@@ -31,7 +33,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="lName"
-                  className="block text-right text-gray-700 font-medium mb-2"
+                  className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
                 >
                   الاسم الثالث
                 </label>
@@ -45,7 +47,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="mName"
-                  className="block text-right text-gray-700 font-medium mb-2"
+                  className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
                 >
                   الاسم الثاني
                 </label>
@@ -59,7 +61,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="fName"
-                  className="block text-right text-gray-700 font-medium mb-2"
+                  className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
                 >
                   الاسم الأول
                 </label>
@@ -76,7 +78,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-right text-gray-700 font-medium mb-2"
+                className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
               >
                 البريد الإلكتروني
               </label>
@@ -92,7 +94,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-right text-gray-700 font-medium mb-2"
+                className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
               >
                 رقم الهاتف
               </label>
@@ -107,7 +109,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor="fatherPhone"
-                className="block text-right text-gray-700 font-medium mb-2"
+                className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
               >
                 رقم هاتف ولي الأمر
               </label>
@@ -124,7 +126,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="year"
-                  className="block text-right text-gray-700 font-medium mb-2"
+                  className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
                 >
                   السنة الدراسية
                 </label>
@@ -140,13 +142,13 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="Gender"
-                  className="block text-right text-gray-700 font-medium mb-2"
+                  className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
                 >
                   النوع
                 </label>
                 <select
                   id="Gender"
-                  className="w-full px-4 py-2 text-right border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="w-full px-4 py-2 text-right border  border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 >
                   <option value="male">ذكر</option>
                   <option value="female">أنثى</option>
@@ -158,7 +160,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-right text-gray-700 font-medium mb-2"
+                className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
               >
                 كلمة المرور
               </label>
@@ -172,7 +174,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor="confirmPassword"
-                className="block text-right text-gray-700 font-medium mb-2"
+                className="block text-right text-secondaryColor dark:text-white font-medium mb-2"
               >
                 تأكيد كلمة المرور
               </label>
@@ -187,7 +189,7 @@ export default function Register() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-[#cfc85a] to-amber-400  hover:from-amber-500  hover:to-[#cfc85a] text-white py-2 px-4 rounded-lg shadow-lg  transition duration-300"
+              className="w-full bg-secondaryColor  text-black dark:text-white py-2 px-4 rounded-lg shadow-lg  transition duration-300"
             >
               إنشاء حساب
             </button>
@@ -195,11 +197,11 @@ export default function Register() {
         </div>
 
         {/* Right Section: Image */}
-        <div className="hidden md:block md:w-1/3 bg-blue-500">
+        <div className="hidden md:block md:w-1/3 dark:bg-drkColor">
           <img
-            src="https://i.pinimg.com/236x/20/6e/3b/206e3bf32fe66a7f3dfa75fc154d4c81.jpg"
-            alt="Register Illustration"
-            className=" h-full "
+            src="https://readymadeui.com/signin-image.webp"
+            class="w-full h-full object-contain"
+            alt="login-image"
           />
         </div>
       </div>
