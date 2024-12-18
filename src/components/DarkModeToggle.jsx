@@ -28,7 +28,7 @@ const DarkModeToggle = () => {
     <button
       onClick={toggleDarkMode}
       className="relative w-16 h-8 bg-gray-200 rounded-full shadow-inner flex items-center justify-start dark:justify-end transition-all duration-300">
-      <div className="absolute left-1 top-1 w-6 h-6 bg-secondaryColor rounded-full flex items-center justify-center text-white shadow-lg transition-opacity duration-300 dark:opacity-0">
+      <div className="absolute left-1 top-1 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-white shadow-lg transition-opacity duration-300 dark:opacity-0">
         🌞
       </div>
       <div className="absolute right-1 top-1 w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-secondaryColor shadow-lg transition-opacity duration-300 opacity-0 dark:opacity-100">

@@ -80,17 +80,16 @@ export default function Navbar() {
                 </div>
                 <DarkModeToggle />
               </li>
-
               <li>
                 <button className="flex items-center gap-[5px] bg-white px-4 py-1 text-[16px] font-bold hover:shadow-custom text-black rounded-xl transition-all group">
-                  <IoMdLogIn className="transition-transform  text-secondaryColor duration-500 ease-in-out group-hover:rotate-[720deg]" />
+                  <IoMdLogIn className="transition-transform  text-mainColor duration-500 ease-in-out group-hover:rotate-[720deg]" />
                   <Link to="/login">
-                    تسجيل <span className="text-secondaryColor">دخولك</span>
+                    تسجيل <span className="text-mainColor">دخولك</span>
                   </Link>
                 </button>
               </li>
               <li>
-                <button className="bg-secondaryColor   px-4 py-1 text-[16px] font-bold text-black hover:text-secondaryColor hover:bg-white rounded-xl transition-all">
+                <button className="bg-mainColor  px-4 py-1 text-[16px] font-bold text-black hover:text-mainColor hover:bg-white rounded-xl transition-all">
                   <Link to="/register" className="">
                     انشئ حسابك الان!
                   </Link>

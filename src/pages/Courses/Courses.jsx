@@ -1,21 +1,23 @@
 import CourseCard from "./component/CourseCard";
 
 const courses = [
-  {
-    title: "دورة تعلم البرمجة",
-    description:
-      "دورة متكاملة لتعلم البرمجة من الصفر باستخدام لغات البرمجة الحديثة.",
-    videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
-    price: "300",
-    courseNumber: "101",
-  },
+
   {
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+    price: "250",
+    courseNumber: "102",
+  },
+  
+  {
+    title: "دورة التسويق الرقمي",
+    description:
+      "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
+    videoUrl:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
     courseNumber: "102",
   },
@@ -24,10 +26,24 @@ const courses = [
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
     courseNumber: "102",
   },
+  {
+    title: "دورة التسويق الرقمي",
+    description:
+      "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
+    videoUrl:
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+    price: "250",
+    courseNumber: "102",
+  },
+ 
+
+
+
+ 
 ];
 export default function Courses() {
   return (
@@ -47,8 +63,7 @@ export default function Courses() {
             جميع الدورات
           </button>
         </div>
-
-        <div className="  flex  flex-col md:flex-row items-center md:items-start mx-auto  ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-4 ">
           {courses.map((course, index) => (
             <CourseCard
               key={index}
