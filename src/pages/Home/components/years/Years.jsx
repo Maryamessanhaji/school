@@ -3,7 +3,7 @@ import YearCard from "./YearCard";
 
 export default function Years() {
   return (
-    <div className="my-[20px] flex flex-col gap-8  dark:bg-drkColor">
+    <div className="my-[20px] flex flex-col gap-8  ">
       <div className="flex flex-col items-center justify-center">
         <h4 className="text-[40px] relative font-[Marhey] font-bold text-secondaryColor ">
           <svg

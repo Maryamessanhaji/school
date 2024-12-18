@@ -10,6 +10,7 @@ import Courses from "./pages/Courses/Courses";
 import CourseDescription from "./pages/coutsedetails/CourseDescription";
 import YearCard from "./pages/Home/components/years/YearCard";
 import Years from "./pages/Home/components/years/Years";
+import AllCourses from "./pages/Courses/component/AllCourses";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/footer" element={<Footer />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courseDescription" element={<CourseDescription />} />
+            <Route path="/allCourses" element={<AllCourses />} />
             <Route path="/yearCard" element={<YearCard />} />
             <Route path="/years" element={<Years />} />
           </Route>

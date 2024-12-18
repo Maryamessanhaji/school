@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import Styles from "./../../Home.module.css";
+import imgHome from '../../../../assets/imgHome.png'
 const { title } = Styles;
+
 
 export default function Header() {
   return (
-    <div  >
+    <div   >
       {" "}
       <section className="flex h-auto bg-cover bg-center  items-center justify-between  ">
         <div className="container mx-auto flex flex-col">
@@ -27,7 +29,7 @@ export default function Header() {
         </div>
         <div className="">
           <img
-            src="https://khaled-sakr.com/static/media/khaledMasked.b8ed0515892ec0adb894.png"
+            src={imgHome}
             alt="not found"
             className="w-[500px]"
           />

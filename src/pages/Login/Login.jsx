@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="min-h-screen  flex items-center justify-center dark:bg-drkColor ">
+    <div className="min-h-screen  flex items-center justify-center  ">
       <div className="bg-white border border-secondaryColor rounded-lg shadow-lg w-full max-w-3xl flex flex-col dark:bg-drkColor md:flex-row">
         {/* Left Section: Image */}
         <div className="hidden md:block md:w-1/2">

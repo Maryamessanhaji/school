@@ -1,68 +1,45 @@
 import { Link } from "react-router-dom";
 
-export default function CourseCard({
-  title,
-  description,
-  videoUrl,
-  price,
-  courseNumber,
-}) {
+export default function CourseCard({ title, description, videoUrl, price }) {
   return (
-   
-      <>
-        <div className=" shadow-md rounded-lg p-4 border  border-secondaryColor  ">
-          {/* Image Section */}
-          <div className="w-full ">
-            <img
-              src={videoUrl}
-              alt="Course Image"
-              className="w-full h-64 object-cover rounded-t-lg"
-            />
+    <>
+      <div className="bg-white dark:bg-drkColor shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)]  w-full max-w-sm rounded-lg overflow-hidden mx-auto font-[sans-serif] mt-4">
+        <div className="min-h-[256px]">
+          <img src={videoUrl} className="w-full " />
+        </div>
+        <h3 class="text-secondaryColor text-xl font-bold font-[Marhey] ">
+          {title}
+        </h3>
+
+        <hr className="my-4 border-secondaryColor " />
+        <div class="p-6 ">
+          <div className="flex justify-between items-center">
+            <div class="bg-gradient-to-r from-mainColor to-secondaryColor text-white rounded-lg py-1 px-3 space-x-2 space-x-reverse">
+              <span className=" text-black dark:text-white">{price}</span> ريال
+            </div>
+            <div className=" dark:text-white flex flex-col">
+              <span>الأحد، ٨ ديسمبر ٢٠٢٤</span>
+              <span>الأحد، ٨ ديسمبر ٢٠٢٤</span>
+            </div>
           </div>
 
-          {/* Floating Description Card */}
-          <div className=" px-5 dark:bg-drkColor dark:text-white     ">
-            {/* Title */}
-            <h3 className="text-lg font-bold text-secondaryColor text-center border-b-2 border-secondaryColor pb-2">
-              {title}
-            </h3>
-            <div className="flex justify-between items-center">
-              <button className="bg-mainColor px-4 py-1 rounded-lg text-black hover:bg-white hover:text-secondaryColor dark:text-black transition-all">
-                <span className="text-secondaryColor">{price}
-                </span> ريال
-              </button>
-              <div className="text-left flex flex-col">
-                <span>الأحد، ٨ ديسمبر ٢٠٢٤</span>
-                <span>الأحد، ٨ ديسمبر ٢٠٢٤</span>
-              </div>
-            </div>
-            <hr className="border-gray-400 my-4" />
-            {/* Description and Buttons */}
-            <div className="flex flex-col mt-4 space-y-2">
-              {/* Description */}
-              <p className="text-sm text-black dark:text-white text-justify">
-                {description}
-              </p>
+          <hr className="border-gray-400 my-4" />
 
-              {/* Buttons */}
-              <div className="flex justify-between items-center mt-4">
-              <button className="bg-mainColor px-3 py-2 rounded-lg text-white hover:bg-white hover:text-secondaryColor dark:text-black transition-all">
-               {courseNumber}   تفاصيل أكثر
-                </button>
-                <button className="bg-mainColor px-4 py-2 rounded-lg text-white hover:bg-white hover:text-secondaryColor dark:text-black transition-all">
-                  انضم لنا الآن
-                </button>
-               
-              </div>
-            </div>
-
-          
-
-            {/* Footer Section */}
-           
+          <p class="mt-4 text-lg text-gray-700 leading-relaxed dark:text-white">
+            {description}
+          </p>
+          <div className="flex justify-between items-center">
+            <button className="bg-mainColor  px-4 py-1 text-[16px] font-bold text-black hover:text-mainColor hover:bg-white rounded-xl transition-all">
+              <Link to="/courseDescription" className="">
+                تفاصيل أكثر
+              </Link>
+            </button>
+            <button className="flex items-center gap-[5px] bg-white px-4 py-1 border border-secondaryColor text-[16px] font-bold hover:shadow-custom text-black rounded-xl transition-all group">
+              <Link to="/">انضم لنا الآن</Link>
+            </button>
           </div>
         </div>
-      </>
-  
+      </div>
+    </>
   );
 }
