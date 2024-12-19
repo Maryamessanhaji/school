@@ -10,13 +10,13 @@ const years = [
   {
     Title: "الصف الثاني الثاوي",
     description: "محاضرات الصف الثاني الثانوي",
-    pathImg: "../../../../../src/assets/year2.svg",
+    pathImg: "../../../../../src/assets/year3.svg",
     bg: "bg-[rgb(226,236,240)]",
   },
   {
     Title: "الصف الثالث الثانوي",
     description: "محاضرات الصف الثالث الثانوي",
-    pathImg: "../../../../../src/assets/year3.svg",
+    pathImg: "../../../../../src/assets/year2.svg",
     bg: "bg-[rgb(226,236,240)]",
   },
 ];

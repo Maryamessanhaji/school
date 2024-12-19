@@ -1,30 +1,76 @@
-export default function CourseDescription() {
-  return (
-    <div className="bg-gray-100 py-16 px-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start">
-        {/* Left Section: Course Image */}
+import React from "react";
+import { useParams } from "react-router-dom";
 
-        {/* Right Section: Course Details */}
-        <div className="w-full md:w-1/2 md:pl-12 text-right">
-          {/* Course Title */}
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            اسم الدورة التدريبية
+const courses = [
+  {
+    id: 1,
+    title: "دورة التسويق الرقمي",
+    description:
+      "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
+    videoUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+    price: "250",
+    details:
+      "تغطي الدورة مجموعة من المواضيع المهمة مثل تحسين محركات البحث، التسويق عبر وسائل التواصل الاجتماعي، الإعلانات الممولة، والبريد الإلكتروني التسويقي.",
+  },
+  {
+    id: 2,
+    title: "دورة التصميم الجرافيكي",
+    description:
+      "تعلم أساسيات التصميم باستخدام برامج مثل Photoshop وIllustrator.",
+    videoUrl:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+    price: "300",
+    details:
+      "تتضمن الدورة أساسيات التصميم، اختيار الألوان، تصميم الشعارات، وإنشاء التصاميم الجرافيكية الاحترافية.",
+  },
+  {
+    id: 3,
+    title: "دورة البرمجة",
+    description: "ابدأ مسيرتك في البرمجة من الصفر مع هذه الدورة.",
+    videoUrl:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+    price: "400",
+    details:
+      "تغطي الدورة لغات برمجية مثل Python وJavaScript، وكيفية إنشاء تطبيقات الويب.",
+  },
+];
+
+export default function CourseDescription() {
+  const { id } = useParams();
+  const course = courses.find((course) => course.id === parseInt(id));
+
+  if (!course) {
+    return (
+      <div className="text-center mt-16">
+        <h1 className="text-2xl font-bold text-red-500">لم يتم العثور على الدورة</h1>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-[40px] font-bold text-secondaryColor text-center">
+        {course.title}
+      </h1>
+      <div className="mt-8 flex flex-col lg:flex-row gap-8">
+        {/* Image Section */}
+        <div className="flex-1">
+          <img
+            src={course.videoUrl}
+            alt={course.title}
+            className="rounded-lg shadow-lg w-full"
+          />
+        </div>
+        {/* Details Section */}
+        <div className="flex-1">
+          <h2 className="text-[30px] font-bold text-secondaryColor">
+            تفاصيل الدورة
           </h2>
-          {/* Course Description */}
-          <p className="text-gray-600 leading-relaxed mb-6">
-            هذه الدورة مصممة لمساعدتك على تطوير مهاراتك في المجال المطلوب. تتضمن
-            الدورة محتوى تعليمي عالي الجودة يغطي جميع المواضيع الأساسية بطريقة
-            بسيطة وسهلة الفهم.
-          </p>
-          {/* Instructor Info */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-gray-800">:المحاضر </h4>
-            <p className="text-gray-600">د. أحمد محمد</p>
-          </div>
-          {/* Features List */}
+          <p className="mt-4 text-gray-600 leading-relaxed">{course.details}</p>
           <div className="mb-6">
             <h4 className="text-xl font-semibold text-gray-800 mb-2">
-              : مميزات الدورة
+              مميزات الدورة :
             </h4>
             <ul className="list-none pr-4 text-gray-600 space-y-2">
               <li>إمكانية الوصول مدى الحياة للمحتوى</li>
@@ -33,19 +79,15 @@ export default function CourseDescription() {
               <li>دعم كامل من المدرب</li>
             </ul>
           </div>
-          {/* Call-to-Action Button */}
-          <div>
-            <button className="bg-blue-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
-              اشترك الآن
-            </button>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENoDG3Inypgjd44eeVXBuXg3FdYAMou_Wkw&s"
-            alt="Course"
-            className="rounded-lg shadow-lg w-full object-cover"
-          />
+          <h3 className="mt-8 text-[24px] font-bold text-secondaryColor">
+            السعر:
+            <span className="text-gray-800 dark:text-white"> {course.price} ريال</span>
+          </h3>
+          <button
+            className="mt-6 bg-secondaryColor text-white p-3 rounded-lg hover:bg-secondaryColor-dark transition-all"
+          >
+            انضم الآن
+          </button>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import CourseCard from "./component/CourseCard";
 
 const courses = [
   {
+    id:1,
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
@@ -12,6 +13,7 @@ const courses = [
   },
 
   {
+    id:2,
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
@@ -20,6 +22,7 @@ const courses = [
     price: "250",
   },
   {
+    id:3,
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
@@ -28,6 +31,7 @@ const courses = [
     price: "250",
   },
   {
+    id:4,
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
@@ -59,6 +63,7 @@ export default function Courses() {
               return (
                 <CourseCard
                   key={index}
+                  id={course.id}
                   title={course.title}
                   description={course.description}
                   videoUrl={course.videoUrl}

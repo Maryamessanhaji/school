@@ -11,6 +11,7 @@ import CourseDescription from "./pages/coutsedetails/CourseDescription";
 import YearCard from "./pages/Home/components/years/YearCard";
 import Years from "./pages/Home/components/years/Years";
 import AllCourses from "./pages/Courses/component/AllCourses";
+import YearDetails from "./pages/Home/components/years/YearDetails";
 function App() {
   return (
     <>
@@ -23,10 +24,11 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/footer" element={<Footer />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/courseDescription" element={<CourseDescription />} />
+            <Route path="/courses/details/:id" element={<CourseDescription />} />
             <Route path="/allCourses" element={<AllCourses />} />
             <Route path="/yearCard" element={<YearCard />} />
             <Route path="/years" element={<Years />} />
+            <Route path="/courses/years/:yearId" element={<YearDetails />} />
           </Route>
         </Routes>
         <Footer />  

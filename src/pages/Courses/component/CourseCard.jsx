@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-export default function CourseCard({ title, description, videoUrl, price }) {
+export default function CourseCard({id, title, description, videoUrl, price }) {
   return (
     <>
       <div className="bg-white dark:bg-drkColor shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)]  
@@ -31,7 +31,8 @@ export default function CourseCard({ title, description, videoUrl, price }) {
           </p>
           <div className="flex justify-between items-center">
             <button className="bg-mainColor  px-4 py-1 text-[16px] font-bold text-black hover:text-mainColor hover:bg-white rounded-xl transition-all">
-              <Link to="/courseDescription" className="">
+              <Link to={`/courses/details/${id }`}>
+             
                 تفاصيل أكثر
               </Link>
             </button>
@@ -46,6 +47,7 @@ export default function CourseCard({ title, description, videoUrl, price }) {
 }
 
 CourseCard.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   videoUrl: PropTypes.string.isRequired,
