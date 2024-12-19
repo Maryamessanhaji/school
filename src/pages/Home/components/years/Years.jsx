@@ -1,4 +1,3 @@
-import Dropdown from "./Dropdown";
 import YearCard from "./YearCard";
 
 export default function Years() {
@@ -48,7 +47,6 @@ export default function Years() {
           السنين الدراسيه
         </h5>
       </div>
-      {/* <Dropdown/> */}
       <YearCard/>
     
     </div>

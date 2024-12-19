@@ -2,53 +2,39 @@ import { Link } from "react-router-dom";
 import CourseCard from "./component/CourseCard";
 
 const courses = [
-
   {
- 
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
-   
   },
-  
+
   {
-    
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
-   
   },
   {
-    
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
-   
   },
   {
-   
     title: "دورة التسويق الرقمي",
     description:
       "تعلم استراتيجيات التسويق الرقمي وكيفية استخدامها للتوسع في الأعمال.",
     videoUrl:
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcROVmTiF2zofvfdAiD_YkP1tNfdowgHc8w&s",
     price: "250",
-   
   },
- 
-
-
-
- 
 ];
 export default function Courses() {
   return (
@@ -63,30 +49,24 @@ export default function Courses() {
           </p>
           <button
             className="bg-secondaryColor h-fit p-[5px_15px] w-40 rounded-lg text-white
-            hover:bg-white transition-all ease-in-out hover:text-secondaryColor "
-          >
-            <Link to='/allCourses'>
-           
-            جميع الدورات
-            </Link>
+            hover:bg-white transition-all ease-in-out hover:text-secondaryColor ">
+            <Link to="/allCourses">جميع الدورات</Link>
           </button>
         </div>
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  ">
-          
-          {courses.map((course, index) => 
-            {if (index < 3) {
-              return(
-              <CourseCard
-              key={index}
-              title={course.title}
-              description={course.description}
-              videoUrl={course.videoUrl}
-              price={course.price}
-             
-            />)
-            }}
-           
-          )}
+          {courses.map((course, index) => {
+            if (index < 3) {
+              return (
+                <CourseCard
+                  key={index}
+                  title={course.title}
+                  description={course.description}
+                  videoUrl={course.videoUrl}
+                  price={course.price}
+                />
+              );
+            }
+          })}
         </div>
       </div>
     </section>
